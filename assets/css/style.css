@@ -1,0 +1,523 @@
+@import url(reset.css);
+
+:root {
+  --main: #c89446;
+  --second: #383838;
+  --third: #6f6f6f;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+  line-height: 1.625;
+  color: var(--third);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+/* header */
+header {
+  height: 100vh;
+  color: white;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.92),
+      rgba(54, 54, 54, 0.5) 39.24%,
+      rgba(28, 28, 28, 0.4)
+    ),
+    url('../img/eggs.jpg') center center / cover no-repeat;
+}
+
+nav {
+  font-size: 0.875rem;
+  padding: 18px 0;
+  text-align: center;
+}
+
+header a {
+  display: inline-block;
+  margin: 0 15px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  padding: 6px 10px;
+}
+nav a:hover {
+  color: var(--main);
+}
+
+#reserver {
+  border: 1px solid var(--main);
+  padding: 7px 10px;
+  transition-property: color, background-color 0.3;
+}
+#reserver:hover {
+  border: 1px solid white;
+  background-color: var(--main);
+  color: black;
+}
+#logo {
+  text-align: center;
+}
+#baseline {
+  padding: 70px 0;
+  text-align: center;
+  line-height: 1;
+}
+#baseline span:first-child {
+  font-family: 'Pinyon Script', sans-serif;
+  color: var(--main);
+  display: block;
+  font-size: 2.2rem;
+}
+#baseline strong {
+  font-weight: 700;
+  display: block;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+#baseline span:last-child {
+  font-weight: 300;
+  font-size: 1rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 720px) {
+  main {
+    background: top 0px right 0 url('../img/oranges.jpg') no-repeat,
+      top 640px left 0 url('../img/spices.jpg') no-repeat;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #baseline {
+    padding: 15% 0 227px;
+  }
+  #baseline span:first-child {
+    font-size: 4.75rem;
+  }
+  #baseline strong {
+    font-size: 5.375rem;
+    letter-spacing: 11px;
+  }
+  #baseline span:last-child {
+    font-size: 2.5rem;
+  }
+}
+/* main */
+/* section 1*/
+
+.image {
+  border: 1px solid var(--main);
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+figure {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.article-container {
+  margin: 0 auto;
+  padding: 24px 0;
+}
+.first {
+  padding: 20px 14px;
+}
+.first article {
+  max-width: 450px;
+}
+h1::before {
+  margin-top: 1rem;
+  content: '';
+  width: 24px;
+  height: 2px;
+  display: block;
+  background-color: var(--main);
+}
+body h1 {
+  font-size: 1.75rem;
+  color: var(--main);
+  font-weight: 400;
+  font-family: 'Pinyon Script', sans-serif;
+  line-height: 50px;
+}
+body h2 {
+  font-size: 1.75rem;
+  color: var(--second);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: 2px;
+}
+body p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.see-more {
+  color: var(--main);
+}
+#see-more:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 720px) {
+  figure {
+    padding: 0;
+  }
+
+  div.article-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .article-container:nth-of-type(2n) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .article-container {
+    max-width: 60%;
+  }
+  .image {
+    border: none;
+    position: relative;
+  }
+
+  .image::before {
+    content: '';
+    display: block;
+    border: 1px solid var(--main);
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+/* section 2*/
+section.second {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10vh 14px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu-title {
+  text-align: center;
+  max-width: 640px;
+  height: auto;
+}
+div > h1::before {
+  align-self: center;
+  margin-left: 50%;
+  margin-top: 0;
+}
+#categories {
+  margin: 64px 0 32px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 490px;
+}
+
+#categories > a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 2px 0;
+  color: var(--second);
+}
+
+.active {
+  border-bottom: 2px solid var(--main);
+}
+
+/* menu summary */
+.menu-summary-item {
+  margin-bottom: 30px;
+}
+.menu-summary-item img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+.menu-summary-item h3 {
+  font-weight: bold;
+  font-size: 1.125;
+  margin-bottom: 0.75rem;
+  color: var(--second);
+}
+.menu-summary-item p {
+  font-size: 0.875rem;
+  color: var(--third);
+}
+
+#price {
+  font-family: 'Pinyon Script', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--main);
+}
+.chef {
+  padding-top: 100px;
+}
+.chef-text {
+  text-align: center;
+}
+.chef-text p {
+  margin: 8px 0 16px;
+}
+.chef-img {
+  border: 1px solid var(--main);
+  display: flex;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 720px) {
+  .chef-img {
+    display: none;
+  }
+  .menu-summary {
+    margin-top: 35px;
+    padding-top: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+  }
+  .chef {
+    height: 550px;
+    width: 100%;
+    padding-top: 120px;
+    text-align: start;
+    background: right 0 bottom 0 url('../img/chef.png') no-repeat;
+  }
+  .chef-text {
+    width: 720px;
+    height: 350px;
+  }
+
+  .menu-summary::before {
+    content: '';
+    height: 400px;
+    width: 400px;
+    border: 2px solid var(--main);
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    position: absolute;
+    z-index: -2;
+  }
+  .menu-summary-item {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    max-height: 160px;
+    max-width: 500px;
+    background: white;
+    margin-bottom: 110px;
+  }
+
+  .menu-summary-item:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Reservation */
+.reservation {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.92),
+      rgba(54, 54, 54, 0.5) 39.24%,
+      rgba(28, 28, 28, 0.4)
+    ),
+    url('../img/reservation.jpg');
+  color: white;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+.reservation-text {
+  max-width: 640px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.reservation-text h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+form {
+  padding: 0 20px;
+  text-align: center;
+}
+select option {
+  color: black;
+}
+.reservation-input {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #6f6f6f;
+  border-radius: 2px;
+  color: white;
+  height: 40px;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0 0.5rem;
+  font-size: 0.875rem;
+  margin: 10px;
+  transition: background 0.3s, border-color 0.3s;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.select {
+  background: right 0.5rem center url('../img/arrow.svg') no-repeat;
+}
+.reservation-input:focus {
+  border-color: var(--main);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.button {
+  font-weight: 600;
+  background: var(--main);
+  font-size: 0.875rem;
+  color: white;
+  border: none;
+  border: 1px solid transparent;
+  padding: 11px 1rem;
+  margin: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.reservation .button {
+  width: 100%;
+}
+.button:hover {
+  background: transparent;
+  border: 1px solid var(--main);
+}
+@media only screen and (min-width: 720px) {
+  .reservation-form-row {
+    margin: 64px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reservation .button {
+    width: calc(33.3% - 20px);
+  }
+  form {
+    padding: 0 280px;
+  }
+}
+
+/* recipes */
+.recipes {
+  padding: 10vh 14px;
+}
+.recipes-text {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+.recipes span {
+  font-size: 1.125rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.recipes strong {
+  font-size: 1.5rem;
+}
+.recipe-item {
+  border-bottom: 1px solid #f2f2f2;
+  padding: 24px 0;
+}
+.recipe-item:last-child {
+  border-bottom: none;
+}
+.recipes a.see-more {
+  display: block;
+  text-align: end;
+}
+
+@media only screen and (min-width: 720px) {
+  .recipes {
+    padding: 10vh 30vh;
+    background: left 0 top -20px url('../img/news-bg.jpg') no-repeat;
+  }
+  .recipes-text {
+    text-align: right;
+    margin-left: 25vw;
+  }
+  .recipes h1::before {
+    margin-left: 100%;
+  }
+  .recipe-item {
+    margin-left: 15vw;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.map {
+  height: 460px;
+  width: 100%;
+}
+
+/* footer */
+footer {
+  background-color: var(--second);
+
+  text-align: center;
+  padding: 50px 14px;
+}
+.footer-column {
+  margin: 20px 0;
+  color: white;
+}
+@media only screen and (min-width: 720px) {
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 5vw;
+  }
+  .footer-column {
+    width: 290px;
+    margin-right: 50px;
+  }
+  .footer-column:first-child {
+    width: 450px;
+  }
+  .footer-column h1::before {
+    margin-left: 0;
+  }
+  .footer-column:last-child {
+    margin-right: 0;
+    flex: none;
+  }
+}
